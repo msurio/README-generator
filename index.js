@@ -1,18 +1,32 @@
+//dependencies:
 const fs = require("fs");
 const inquirer = require("inquirer")
+const util = require("util");
+const api = require("./utils/api")
+const generateMarkdown = require("./utils/generateMarkdown")
 
 // array of questions for user
 const questions = [
     {
         type: "input",
         name: "title",
-        message: "What is the title of your project?"
+        message: "What is the title of your project?",
+        validate: function(value){
+            if(value.length < 1) {
+                return console.log("Project Title is required");
+            }
+        }
     },
 
     {
         type: "input",
         name: "description",
-        message: "Write a description of your project"
+        message: "Write a description of your project",
+        validate: function(value){
+            if (value.length < 1){
+                return console.log("Project Description is required");
+            }
+        }
     },
 
     {
@@ -65,11 +79,18 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, err => {
+        if (err) {
+            return console.log(err);
+        }
+
+        console.log("Your README.md file has been generated!");
+    })
 }
 
 // function to initialize program
-function init() {
-
+async function init() {
+    
 }
 
 // function call to initialize program
