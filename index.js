@@ -77,6 +77,12 @@ const questions = [
     name: "username",
     message: "What is your github username?",
   },
+
+  {
+      type:"input",
+      name:"questions",
+      message: "Any questions if you run into an issue?"
+  }
 ];
 
 // function to write README file
@@ -100,7 +106,7 @@ async function init() {
     const markdown = generateMarkdown(data);
     console.log(markdown);
 
-    await writeFileAsync("./test/testREADME.md", generateContent);
+    await writeFileAsync("./test/testREADME.md", markdown);
     console.log("✔️  Successfully wrote to README.md");
   } catch (err) {
     console.log(err);

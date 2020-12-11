@@ -10,6 +10,7 @@ function generateMarkdown(data) {
 * [Usage](#usage)
 * [License](#license)
 * [Contributing](#contributing)
+* [Authors](#authors)
 * [Tests](#tests)
 
 
@@ -26,12 +27,22 @@ function generateMarkdown(data) {
 
   This application is covered by the ${data.license} license. 
 
-  ##Contribution
+  ##Contributing
     ${data.contribution}
   
   ##Tests
+    ${data.tests}
 
   #Questions
+    ${data.questions}
+
+    <br/>
+
+    Find me on GitHub: [${data.username}](https://github.com/${data.username})
+
+    <br />
+
+    Email me with any questions: ${answers.email}
 
 
 
