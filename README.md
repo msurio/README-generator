@@ -17,4 +17,4 @@ The application then takes your responses. From there, the application will gene
 
 ## Questions
     For further questions or inquiries, just contact me:
-       Email: (mailto:SurioMAnthony@gmail.com)
+       Email: ```<a href="mailto:SurioMAnthony@gmail.com">```
