@@ -42,7 +42,7 @@ function generateMarkdown(data) {
 
     <br />
 
-    Email me with any questions: ${answers.email}
+    Email me with any questions: ${data.email}
 
 
 
